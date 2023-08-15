@@ -64,3 +64,7 @@ Algo que se observó en esta red es que al momento de activar el enlace que se h
 | --------- | ----------------------- | ------------ | ----------- | ----------------- |
 | 1         | PVST                    | 35s          | 34s         | 33.20s            |
 | 2         | Rapid PVST              | 0s           | 0s          | 0s                |
+
+### Elección de escenario
+
+Se eligió el escenario 2, ya que la convergencia es inmediata, no se pierden paquetes y se tiene un árbol de expansión por cada vlan, lo cual permite que la red sea más eficiente. Por lo que tomando como referencia un caso de la vida real, el protocolo Rapid PVST es el más adecuado para la mayoría de las redes y en este caso, para la red que se está trabajando.
