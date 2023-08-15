@@ -28,7 +28,39 @@ Al igual que en la medición de convergencias anteriores, los pings fueron desde
 
 ![Convergencia PVST](images/pvst6.png)
 
+### Rapid PVST
+
+Rapid PVST es un protocolo que permite la convergencia de la red de manera más rápida que PVST, esto se debe a que se implementa el protocolo RSTP en cada vlan, por lo que se tiene un árbol de expansión por cada vlan.
+
+Para hacer uso de este modo se configuró en todos los switch lo siguiente:
+
+![Configuracion Rapid PVST](images/rpvst1.png)
+
+Lo cual es la configuración para que los switches utilicen el protocolo Rapid PVST en lugar de PVST.
+
+Para todas las redes se realizó el mismo procedimiento que en PVST, se utilizaron los mismos hosts y se apagaron los mismos enlaces, los resultados fueron los siguientes:
+
+#### Red Primaria
+
+La convergencia fue inmediata, no se perdió ningún paquete.
+
+![Convergencia Rapid PVST](images/rpvst2.png)
+
+#### Red Básicos
+
+La convergencia fue inmediata, no se perdió ningún paquete.
+
+![Convergencia Rapid PVST](images/rpvst3.png)
+
+#### Red Diversificado
+
+La convergencia fue inmediata, no se perdió ningún paquete.
+
+Algo que se observó en esta red es que al momento de activar el enlace que se había apagado, se perdió un paquete.
+
+![Convergencia Rapid PVST](images/rpvst4.png)
+
 | Escenario | Protocolo Spanning-Tree | Red Primaria | Red Básicos | Red Diversificado |
 | --------- | ----------------------- | ------------ | ----------- | ----------------- |
 | 1         | PVST                    | 35s          | 34s         | 33.20s            |
-| 2         | Rapid PVST              |              |             |                   |
+| 2         | Rapid PVST              | 0s           | 0s          | 0s                |
