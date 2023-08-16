@@ -1,4 +1,4 @@
-## Elección de escenario con mejor resultado de convergencia\*\*
+## Elección de escenario con mejor resultado de convergencia
 
 ### PVST
 
@@ -68,3 +68,25 @@ Algo que se observó en esta red es que al momento de activar el enlace que se h
 ### Elección de escenario
 
 Se eligió el escenario 2, ya que la convergencia es inmediata, no se pierden paquetes y se tiene un árbol de expansión por cada vlan, lo cual permite que la red sea más eficiente. Por lo que tomando como referencia un caso de la vida real, el protocolo Rapid PVST es el más adecuado para la mayoría de las redes y en este caso, para la red que se está trabajando.
+
+## Políticas de puerto compartidas
+
+### Activar el port-security en todos los puertos de acceso
+
+El port-security es una característica que permite limitar el número de direcciones MAC que se pueden aprender en un puerto de acceso, esto con el fin de evitar ataques de tipo MAC flooding.
+
+Para activar el port-security en todos los puertos de acceso se ingresó a la interfaz fastEthernet del enlace que conecta al host y se configuró lo siguiente:
+
+![Port-security](images/portsecurity1.png)
+
+![Port-security](images/portsecurity2.png)
+
+![Port-security](images/portsecurity3.png)
+
+![Port-security](images/portsecurity4.png)
+
+![Port-security](images/portsecurity5.png)
+
+![Port-security](images/portsecurity6.png)
+
+Cada imagen anterior corresponde a la configuración de cada switch que tiene un enlace hacia un host. En este caso se configuró el port-security para que solo se aprenda una dirección MAC en cada puerto de acceso.
