@@ -4,10 +4,10 @@
 
 ## Integrantes Grupo 2
 
-| Carnet | Nombre |
-| --------- | ------------------------------ |
-| 201800476 | Marvin Alexis Estrada Florian  |
-| 201902781 | Rodrigo Antonio Porón De León  |
+| Carnet    | Nombre                        |
+| --------- | ----------------------------- |
+| 201800476 | Marvin Alexis Estrada Florian |
+| 201902781 | Rodrigo Antonio Porón De León |
 
 ## Topología implementada
 
@@ -19,27 +19,28 @@ Se utilizó la herramienta Packet Tracer para la implementación de la topologí
 
 Cada PC-PT posee una ip determinada con la siguientes direcciones de red:
 
-| Red | Dirección |
-| --------- | -------------- |
-| Primaria | 192.168.12.0/24 |
-| Básicos | 192.168.22.0/24  |
+| Red           | Dirección       |
+| ------------- | --------------- |
+| Primaria      | 192.168.12.0/24 |
+| Básicos       | 192.168.22.0/24 |
 | Diversificado | 192.168.32.0/24 |
 
 Por lo que se procede a configurar la respectiva Ip sobre estas, donde a continuación se muestra un ejemplo de este proceso sobre cada red solicitada:
 
 - Primaria
 
-    ![IP](images/ip1.png)
+  ![IP](images/ip1.png)
 
 - Básicos
-    
-    ![IP](images/ip2.png)
+
+  ![IP](images/ip2.png)
 
 - Diversificado
 
-    ![IP](images/ip3.png)
+  ![IP](images/ip3.png)
 
 ## Hostname y Contraseña en Switches
+
 Como se muestra en la siguiente imagen, se tiene el comando HOST, el cual procede a cambiarle la etiqueta o nombre a un switch, esto aplicado sobre todos los switches de toda la topología:
 ![HOST](images/vtp5.png)
 
@@ -51,9 +52,10 @@ Por lo que para una correcta verificación de una contraseña encriptada, se obs
 
 ![PASS](images/password2.png)
 
-
 ## Configuración de VTP
+
 ### VLAN
+
 Para realizar esta configuración, se seleccionó al switch SW1_G2 para ser el servidor VTP, por lo que a continuación se muestra su proceso, donde se agrega el dominio g2 y contraseña usac, para luego agregarle las VLAN's solicitadas:
 
 ![VTP](images/vtp1.png)
@@ -85,7 +87,7 @@ La convergencia para este protocolo se realizó de la siguiente manera:
 
 ![Convergencia PVST](images/pvst1.png)
 
-Se comenzó a hacer ping desde la PC 192.168.12.1 a la PC 192.168.12.3, se procedió a apagar el enlace que permitía la comunicación entre estas dos vlans y se observó que el tiempo de convergencia fue de 35 segundos.
+Se comenzó a hacer un ping extendido desde la PC 192.168.12.1 a la PC 192.168.12.3, se procedió a apagar el enlace que permitía la comunicación entre estas dos vlans y se observó que el tiempo de convergencia fue de 35 segundos.
 
 ![Convergencia PVST](images/pvst2.png)
 
@@ -93,7 +95,7 @@ Se comenzó a hacer ping desde la PC 192.168.12.1 a la PC 192.168.12.3, se proce
 
 ![Convergencia PVST](images/pvst3.png)
 
-Se realizó el mismo procedimiento que en la red primaria, los pings fueron desde 192.168.22.1 hacia 192.168.22.2, se apagó el enlace que permitía la comunicación entre estas dos vlans y se observó que el tiempo de convergencia fue de 34 segundos.
+Se realizó el mismo procedimiento que en la red primaria, se hizo un ping extendido desde la PC 192.168.22.1 hacia la PC 192.168.22.2, se apagó el enlace que permitía la comunicación entre estas dos vlans y se observó que el tiempo de convergencia fue de 34 segundos.
 
 ![Convergencia PVST](images/pvst4.png)
 
@@ -101,7 +103,7 @@ Se realizó el mismo procedimiento que en la red primaria, los pings fueron desd
 
 ![Convergencia PVST](images/pvst5.png)
 
-Al igual que en la medición de convergencias anteriores, los pings fueron desde 192.168.32.1 hacia 192.168.32.3, se apagó el enlace que permitía la comunicación entre estas dos vlans y se observó que el tiempo de convergencia fue de 33.20 segundos.
+Al igual que en la medición de convergencias anteriores, se hizo un ping extendido desde la PC 192.168.32.1 hacia la PC 192.168.32.3, se apagó el enlace que permitía la comunicación entre estas dos vlans y se observó que el tiempo de convergencia fue de 33.20 segundos.
 
 ![Convergencia PVST](images/pvst6.png)
 
@@ -198,4 +200,5 @@ Por último se tiene otro ejemplo de la red de Diversificado, conectando las mis
 ![Mac-Address](images/macaddress6.png)
 
 ###### _2023 - Laboratorio de Redes de computadoras 2_
+
 ---
