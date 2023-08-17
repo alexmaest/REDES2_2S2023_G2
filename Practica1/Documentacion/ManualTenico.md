@@ -8,7 +8,7 @@ La convergencia para este protocolo se realizó de la siguiente manera:
 
 ![Convergencia PVST](images/pvst1.png)
 
-Se comenzó a hacer ping desde el host 1 al host 2, se procedió a apagar el enlace que permitía la comunicación entre estas dos vlans y se observó que el tiempo de convergencia fue de 35 segundos.
+Se comenzó a hacer ping desde la PC 192.168.12.1 a la PC 192.168.12.3, se procedió a apagar el enlace que permitía la comunicación entre estas dos vlans y se observó que el tiempo de convergencia fue de 35 segundos.
 
 ![Convergencia PVST](images/pvst2.png)
 
@@ -42,18 +42,21 @@ Para todas las redes se realizó el mismo procedimiento que en PVST, se utilizar
 
 #### Red Primaria
 
+Se hizo un ping extendido desde la PC 192.168.12.1 hacia la PC 192.168.12.3.
 La convergencia fue inmediata, no se perdió ningún paquete.
 
 ![Convergencia Rapid PVST](images/rpvst2.png)
 
 #### Red Básicos
 
+Se hizo un ping extendido desde la PC 192.168.22.1 hacia la PC 192.168.22.2.
 La convergencia fue inmediata, no se perdió ningún paquete.
 
 ![Convergencia Rapid PVST](images/rpvst3.png)
 
 #### Red Diversificado
 
+Se hizo un ping extendido desde la PC 192.168.32.1 hacia la PC 192.168.32.3.
 La convergencia fue inmediata, no se perdió ningún paquete.
 
 Algo que se observó en esta red es que al momento de activar el enlace que se había apagado, se perdió un paquete.
