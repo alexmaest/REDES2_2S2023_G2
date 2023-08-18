@@ -55,6 +55,13 @@ Por lo que para una correcta verificación de una contraseña encriptada, se obs
 ## Configuración de VTP
 
 ### VLAN
+Iniciando esta configuración se tomó como base las VLAN's solicitadas, como se muestra a continuación en la tabla:
+
+| Nombre        | Número     |
+| ------------- | ---------- |
+| Primaria      | 12         |
+| Básicos       | 22         |
+| Diversificado | 32         |
 
 Para realizar esta configuración, se seleccionó al switch SW1_G2 para ser el servidor VTP, por lo que a continuación se muestra su proceso, donde se agrega el dominio g2 y contraseña usac, para luego agregarle las VLAN's solicitadas:
 
@@ -191,11 +198,11 @@ En el caso de tener un switch con dos interfaces, se muestra el detalle de como 
 
 ![Mac-Address](images/macaddress4.png)
 
-Se muestra un ejemplo en la red de Básicos, conectando diferentes PC-PT a cada switch, observando que los puertos se apagan y no envían los paquetes de ping:
+Se muestra un ejemplo en la red de Básicos, conectando diferentes PC-PT a cada switch, observando que los puertos se apagan y no envían los paquetes de ping enviados desde 192.168.22.1 a 192.168.22.2 y viceversa:
 
 ![Mac-Address](images/macaddress5.png)
 
-Por último se tiene otro ejemplo de la red de Diversificado, conectando las mismas PC-PT en su switch pero invirtiendo el puerto conectado, observando que los puertos se apagan y no envían los paquetes de ping:
+Por último se tiene otro ejemplo de la red de Diversificado, conectando las mismas PC-PT en su switch pero invirtiendo el puerto conectado, observando que los puertos se apagan y no envían los paquetes de ping desde 192.168.32.1 y 192.168.32.2 hacia 192.168.32.3 y 192.168.32.4 respectivamente:
 
 ![Mac-Address](images/macaddress6.png)
 
