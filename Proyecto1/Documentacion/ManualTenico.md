@@ -60,13 +60,14 @@ En este apartado, se realizó la configuración de los puertos de cada switch, a
   ![PORTS](images/ports_05.png)
 
 ## VTP
+
 Se realizó la configuración del protocolo VTP, donde se determinó que el switch server sería el MSW4, ingresando sus respectivos comandos de la siguiente manera:
 
-  ![VTP](images/vtp_01.png)
+![VTP](images/vtp_01.png)
 
 Por lo que en consecuencia, se procedió a la configuración de todos los demás switches de la topología, siendo estos los clientes del mismo protocolo como se muestra a continuación:
 
-  ![VTP](images/vtp_02.png)
+![VTP](images/vtp_02.png)
 
 Dando como credenciales que el dominio sería grupo2 y la contraseña redes2, esto como parte de la libertad proporcionada de colocar las mismas a nuestro criterio.
 
@@ -74,15 +75,15 @@ Dando como credenciales que el dominio sería grupo2 y la contraseña redes2, es
 
 Iniciando esta configuración se tomó como base las VLAN's solicitadas, como se muestra a continuación en la tabla:
 
-| Nombre       | Número |
-| ------------ | ------ |
-| Ventas       |   12   |
-| Informatica  |   22   |
-| ACentral     |   32   |
-| BCentral     |   42   |
-| CCentral     |   52   |
-| DCentral     |   62   |
-| ECentral     |   72   |
+| Nombre      | Número |
+| ----------- | ------ |
+| Ventas      | 12     |
+| Informatica | 22     |
+| ACentral    | 32     |
+| BCentral    | 42     |
+| CCentral    | 52     |
+| DCentral    | 62     |
+| ECentral    | 72     |
 
 Para realizar esta configuración, se ingresaron las VLAN's respectivamente en el switch MSW4 mencionando anteriormente que este es el server del protocolo VTP, por lo que se muestran los comandos ingresados:
 
@@ -122,13 +123,68 @@ Se realizó la configuración del PortChannel, donde es una técnica que se util
 
 Se realizó la configuración del protocolo DHCP en los 2 switches DHCP1 y DHCP2, donde se les ingresó las ip de forma estática, en conjunto con su respectivo gateway, DNS:
 
-  ![DHCP](images/dhcp_01.png)
+![DHCP](images/dhcp_01.png)
 
 Añadiendo las 2 redes respecticas de cada VLAN, para poder asignar la ip de forma dinámica en cada servidor de la siguiente manera:
 
-  ![DHCP](images/dhcp_02.png)
+![DHCP](images/dhcp_02.png)
 
 Este procedimiento se realizó en el servidor web para asignarle su ip de forma estática, este perteneciendo a la red 192.168.22.0 con ip 192.168.22.4 respectiva.
 
+## Ip Helper
+
+Se realizó la configuración del comando Ip Helper Address en todos los switches multicapa que tuvieran interfaces VLAN, comando que permite que los dispositivos pertenecientes a una subred puedan solicitar una dirección IP a un servidor DHCP dependiendo de la subred a la que pertenezcan, por lo que se muestra un ejemplo de la configuración realizada:
+
+![HELPER](images/helper_01.png)
+
+Estos comandos se ingresaron en todos los switches multicapa que tuvieran interfaces VLAN.
+
+## EIGRP
+
+Se realizó la configuración del protocolo EIGRP en los switches que enrutaban a los 4 edificios.
+
+La configuración fue la siguiente:
+
+![EIGRP](images/eigrp_01.png)
+
+Esto se realizó en los siguientes switches:
+
+![EIGRP](images/eigrp_02.png)
+
+## HSRP
+
+Se realizó la configuración HSRP para los switches multicapa que enrutaban cada edificio.
+
+La configuración fue la siguiente (para cada edificio):
+
+Los switches configurados para el edificio de la izquierda de la topología fueron: MSW8 y MSW6, los cuales funcionarán como pasivos o activos.
+
+### MSW6
+
+![HSRP](images/hsrp_01.png)
+
+### MSW8
+
+![HSRP](images/hsrp_02.png)
+
+En el edificio de la derecha de la topología se configuraron los switches MSW10 y MSW12, los cuales funcionarán como pasivos o activos.
+
+### MSW10
+
+![HSRP](images/hsrp_05.png)
+
+### MSW12
+
+![HSRP](images/hsrp_06.png)
+
+**_En ambos edificios se realizó la misma configuración para los dos switches mencionados_**
+
+En el edificio de la derecha se realizó la prueba del correcto funcionamiento eliminando uno de los dos switches configurados, el resultado fue el siguiente:
+
+![HSRP](images/hsrp_04.png)
+
+Fuente: [Understand the Hot Standby Router Protocol Features and Functionality](<https://www.cisco.com/c/en/us/support/docs/ip/hot-standby-router-protocol-hsrp/9234-hsrpguidetoc.html#:~:text=The%20HSRP%20behavior%20with%20this,by%2010%20(priority%20becomes%2090)>)
+
 ###### _2023 - Laboratorio de Redes de computadoras 2_
+
 ---
