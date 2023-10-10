@@ -240,6 +240,10 @@ Se realizó la configuración del servidor web perteneciente a la red 192.168.22
 </html>
 ```
 
+Para visualizar dicha página, se debe ingresar al desktop del servidor web, ingresar a la opción _navegador web_ y en la barra de direcciones colocar la dirección del mismo, en este caso: 102.168.22.4.
+
+![WEB](images/serverweb_01.png)
+
 ###### _2023 - Laboratorio de Redes de computadoras 2_
 
 ---
