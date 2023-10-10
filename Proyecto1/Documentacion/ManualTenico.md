@@ -183,6 +183,63 @@ En el edificio de la derecha se realizó la prueba del correcto funcionamiento e
 
 Fuente: [Understand the Hot Standby Router Protocol Features and Functionality](<https://www.cisco.com/c/en/us/support/docs/ip/hot-standby-router-protocol-hsrp/9234-hsrpguidetoc.html#:~:text=The%20HSRP%20behavior%20with%20this,by%2010%20(priority%20becomes%2090)>)
 
+### Servidor Web
+
+Se realizó la configuración del servidor web perteneciente a la red 192.168.22.0, para ello se utilizó el servicio HTTP del mismo, habilitando los protocolos HTTP y HTTPS, seguido a esto se editó el archivo index.html para mostrar la página web estática con la información requerida, el documento html es el siguiente:
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Información del Grupo 2</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #172554;
+        text-align: center;
+      }
+
+      .container {
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        margin: 20px auto;
+        max-width: 400px;
+      }
+
+      h1 {
+        color: #38bdf8;
+      }
+
+      h2 {
+        color: #555;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      li {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Grupo 2</h1>
+      <h2>Datos de los Integrantes:</h2>
+      <ul>
+        <li><strong>Rodrigo Antonio Porón De León</strong> - 201902781</li>
+        <li><strong>Marvin Alexis Estrada Florian</strong> - 201800476</li>
+      </ul>
+    </div>
+  </body>
+</html>
+```
+
 ###### _2023 - Laboratorio de Redes de computadoras 2_
 
 ---
