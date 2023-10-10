@@ -21,14 +21,12 @@ Para la conexión de switches 3650 con cable de fibra óptica, se realizó la co
 
 ## Configuración de Ip
 
-Existen 9 redes dentro de la topología con una ip determinada con la siguientes direcciones en la tabla:
+Existen 7 redes dentro de la topología con una ip determinada con la siguientes direcciones en la tabla:
 
 | Dirección    | Máscara de subred |
 | ------------ | ----------------- |
 | 192.168.12.0 | 255.255.255.0     |
 | 192.168.22.0 | 255.255.255.0     |
-| 192.168.32.0 | 255.255.255.0     |
-| 192.168.42.0 | 255.255.255.0     |
 | 12.0.0.0     | 255.0.0.0         |
 | 22.0.0.0     | 255.0.0.0         |
 | 32.0.0.0     | 255.0.0.0         |
@@ -103,7 +101,7 @@ El enrutamiento interVLAN permite que los dispositivos en diferentes VLANs se co
 
   ![ROUTING](images/routing_02.png)
 
-- Configuración sobre MSW1: Se agrega el gateway 192.168.12.3 con máscara de subred 255.255.255.0 para un servidor DHCP, el 192.168.22.3 con máscara de subred 255.255.255.0 para un servidor DHCP, el 22.0.0.1 con máscara de subred 255.0.0.0, 32.0.0.2 con máscara de subred 255.0.0.0 y 42.0.0.2 con máscara de subred 255.0.0.0
+- Configuración sobre MSW1: Se agrega el gateway 192.168.12.3 con máscara de subred 255.255.255.0 para un servidor DHCP, el 192.168.22.3 con máscara de subred 255.255.255.0 para un servidor DHCP, 32.0.0.2 con máscara de subred 255.0.0.0 y 42.0.0.2 con máscara de subred 255.0.0.0
 
   ![ROUTING](images/routing_03.png)
 
@@ -125,7 +123,7 @@ Se realizó la configuración del protocolo DHCP en los 2 switches DHCP1 y DHCP2
 
 ![DHCP](images/dhcp_01.png)
 
-Añadiendo las 2 redes respecticas de cada VLAN, para poder asignar la ip de forma dinámica en cada servidor de la siguiente manera:
+Añadiendo la red respectiva de cada VLAN, para poder asignar la ip de forma dinámica en cada servidor de la siguiente manera:
 
 ![DHCP](images/dhcp_02.png)
 
