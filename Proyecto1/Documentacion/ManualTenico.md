@@ -143,7 +143,7 @@ Se realizó la configuración del protocolo EIGRP en los switches que enrutaban 
 
 La configuración fue la siguiente:
 
-![EIGRP](images/eigrp_01.png)
+![EIGRP](images/EIGRP_01.png)
 
 Esto se realizó en los siguientes switches:
 
