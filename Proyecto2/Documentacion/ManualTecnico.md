@@ -239,6 +239,27 @@ Este es un proceso de compartir información de enrutamiento entre dos o más pr
 
 ![Redistribute](images/central_redistribute_03.png)
 
+Para la obtención de los valores de redistribute con EIGRP, se procedió a hacer el comando "Show Inteface Vlan [interfaz-deseada]", lo que muestra la siguiente información:
+
+![Redistribute](images/yota_redistribute_03.png)
+
+De estos valores se procede a realizar los respectivos calculos:
+
+|    Variable   |   Valor    |
+| ----------    | ---------- |
+| Bandwidth    	| 1 000 000  |
+| Load	        | 255        |
+| Delay		      | 1000       |
+| Reliability   |	255        |
+| MTU	        	| 1500       |
+
+    BW  = (10000000/1000000)*256 = 2560
+
+    DLY = (1000/10)+(100/10)*100 = 1100
+
+Obteniendo estos resultados, son los que se procedió a ingresar al realizar un redistribute con el protocolo EIGRP, estos siendo:
+
+    metric 2560 1100 255 255 1500
 
 ## Configuración de ISP Akado
 
